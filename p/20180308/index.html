@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='一、前言 最近在解答[最新版]MJRefresh解析与详细使用指导和MJRefresh实现刷新（使用它的Block方法）中简友的提问，浅读了下'>
+<title>浅读MJRefresh后自定义了个UIScrollView监听滚动的block属性</title>
+
+<link rel='canonical' href='https://example.com/p/20180308/'>
+
+<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='浅读MJRefresh后自定义了个UIScrollView监听滚动的block属性'>
+<meta property='og:description' content='一、前言 最近在解答[最新版]MJRefresh解析与详细使用指导和MJRefresh实现刷新（使用它的Block方法）中简友的提问，浅读了下'>
+<meta property='og:url' content='https://example.com/p/20180308/'>
+<meta property='og:site_name' content='tiaotiao.pi'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='KVO' /><meta property='article:tag' content='Block' /><meta property='article:tag' content='MJRefresh' /><meta property='article:published_time' content='2018-03-08T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2018-03-08T00:00:00&#43;00:00'/><meta property='og:image' content='https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/BlogCover/2018/20180308.jpeg' />
+<meta name="twitter:title" content="浅读MJRefresh后自定义了个UIScrollView监听滚动的block属性">
+<meta name="twitter:description" content="一、前言 最近在解答[最新版]MJRefresh解析与详细使用指导和MJRefresh实现刷新（使用它的Block方法）中简友的提问，浅读了下"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/BlogCover/2018/20180308.jpeg' />
+    <link rel="shortcut icon" href="img/favicon.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hucb9c9ffb845db07b7d3d94a22ab153fb_80061_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">👨🏻‍💻</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">tiaotiao.pi</a></h1>
+            <h2 class="site-description">一日为码农，终身撸不停!</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/AbnerPei'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="icon" width="200px" height="195.23px" viewBox="0 0 1049 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M524.979332 0C234.676191 0 0 234.676191 0 524.979332c0 232.068678 150.366597 428.501342 358.967656 498.035028 26.075132 5.215026 35.636014-11.299224 35.636014-25.205961 0-12.168395-0.869171-53.888607-0.869171-97.347161-146.020741 31.290159-176.441729-62.580318-176.441729-62.580318-23.467619-60.841976-58.234462-76.487055-58.234463-76.487055-47.804409-32.15933 3.476684-32.15933 3.476685-32.15933 53.019436 3.476684 80.83291 53.888607 80.83291 53.888607 46.935238 79.963739 122.553122 57.365291 152.97411 43.458554 4.345855-33.897672 18.252593-57.365291 33.028501-70.402857-116.468925-12.168395-239.022047-57.365291-239.022047-259.012982 0-57.365291 20.860106-104.300529 53.888607-140.805715-5.215026-13.037566-23.467619-66.926173 5.215027-139.067372 0 0 44.327725-13.906737 144.282399 53.888607 41.720212-11.299224 86.917108-17.383422 131.244833-17.383422s89.524621 6.084198 131.244833 17.383422C756.178839 203.386032 800.506564 217.29277 800.506564 217.29277c28.682646 72.1412 10.430053 126.029806 5.215026 139.067372 33.897672 36.505185 53.888607 83.440424 53.888607 140.805715 0 201.64769-122.553122 245.975415-239.891218 259.012982 19.121764 16.514251 35.636014 47.804409 35.636015 97.347161 0 70.402857-0.869171 126.898978-0.869172 144.282399 0 13.906737 9.560882 30.420988 35.636015 25.205961 208.601059-69.533686 358.967656-265.96635 358.967655-498.035028C1049.958663 234.676191 814.413301 0 524.979332 0z" fill="#191717" /><path d="M199.040177 753.571326c-0.869171 2.607513-5.215026 3.476684-8.691711 1.738342s-6.084198-5.215026-4.345855-7.82254c0.869171-2.607513 5.215026-3.476684 8.691711-1.738342s5.215026 5.215026 4.345855 7.82254z m-6.953369-4.345856M219.900283 777.038945c-2.607513 2.607513-7.82254 0.869171-10.430053-2.607514-3.476684-3.476684-4.345855-8.691711-1.738342-11.299224 2.607513-2.607513 6.953369-0.869171 10.430053 2.607514 3.476684 4.345855 4.345855 9.560882 1.738342 11.299224z m-5.215026-5.215027M240.760389 807.459932c-3.476684 2.607513-8.691711 0-11.299224-4.345855-3.476684-4.345855-3.476684-10.430053 0-12.168395 3.476684-2.607513 8.691711 0 11.299224 4.345855 3.476684 4.345855 3.476684 9.560882 0 12.168395z m0 0M269.443034 837.011749c-2.607513 3.476684-8.691711 2.607513-13.906737-1.738342-4.345855-4.345855-6.084198-10.430053-2.607513-13.037566 2.607513-3.476684 8.691711-2.607513 13.906737 1.738342 4.345855 3.476684 5.215026 9.560882 2.607513 13.037566z m0 0M308.555733 853.526c-0.869171 4.345855-6.953369 6.084198-13.037566 4.345855-6.084198-1.738342-9.560882-6.953369-8.691711-10.430053 0.869171-4.345855 6.953369-6.084198 13.037566-4.345855 6.084198 1.738342 9.560882 6.084198 8.691711 10.430053z m0 0M351.145116 857.002684c0 4.345855-5.215026 7.82254-11.299224 7.82254-6.084198 0-11.299224-3.476684-11.299224-7.82254s5.215026-7.82254 11.299224-7.82254c6.084198 0 11.299224 3.476684 11.299224 7.82254z m0 0M391.126986 850.049315c0.869171 4.345855-3.476684 8.691711-9.560882 9.560882-6.084198 0.869171-11.299224-1.738342-12.168395-6.084197-0.869171-4.345855 3.476684-8.691711 9.560881-9.560882 6.084198-0.869171 11.299224 1.738342 12.168396 6.084197z m0 0" fill="#191717" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.jianshu.com/u/24508796c320'
+                        target="_blank"
+                        title="简书"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="icon" width="200px" height="200.00px" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M654.791 38.495h-286.53c-95.005 0-142.412 0-193.612 16.118-55.94 20.48-99.935 64.474-120.225 120.226-16.308 51.2-16.308 98.607-16.308 193.611v286.53c0 95.005 0 142.602 16.118 193.613 20.29 55.75 64.285 99.745 120.036 120.035 51.2 16.119 98.607 16.119 193.611 16.119h286.53c95.005 0 142.413 0 193.613-16.119 55.75-20.29 99.745-64.284 120.225-120.035 16.118-51.2 16.118-98.608 16.118-193.612V368.45c0-95.005 0-142.412-16.118-193.612-20.29-55.752-64.285-99.746-120.225-120.226-50.821-16.118-98.228-16.118-193.233-16.118z m0 0" fill="#EA6F5A" /><path d="M235.52 456.818h70.732v370.346H235.52V456.818z m40.012-112.45c17.825 32.995 29.203 65.8 34.512 98.796h77.18c-10.62-42.097-23.894-74.903-39.823-98.797h-71.87z m0 0" fill="#FFFFFF" /><path d="M427.804 278.566h85.144v-46.649H358.59c1.706-3.603 4.361-10.05 7.964-19.153 1.707-7.395 3.603-12.705 5.31-16.497H292.03c-12.326 49.303-40.77 85.902-85.144 109.795v46.65c58.595-14.602 100.124-39.254 124.966-73.956H358.4c8.913 23.703 14.222 46.648 15.929 68.645h74.524c-5.12-25.79-12.326-48.734-21.049-68.835z m-34.702 148.1h320.664v301.701c1.707 27.497-10.62 40.202-37.167 38.306h-43.995v54.803h63.906c62.009 1.896 92.16-26.549 90.453-85.144V371.864h-393.86v54.803z m0 0" fill="#FFFFFF" /><path d="M643.224 476.16H382.483v277.049H563.39c56.699 1.896 83.437-25.6 79.834-82.3V476.16z m-188.871 49.304h117.001v63.146H454.353v-63.146z m82.488 178.252h-82.488v-68.457h117.001v32.996c1.707 25.41-9.671 37.357-34.513 35.46zM645.88 229.262c0-1.896 0.948-4.55 2.654-8.154l7.965-24.652h-79.834c-12.516 51.2-39.823 89.695-82.49 115.295v43.805c54.993-14.602 96.712-40.202 124.967-76.8h37.167c8.913 23.703 14.222 46.648 15.929 68.645h71.87c-1.707-18.204-8.913-41.15-21.239-68.645h93.108v-49.304H645.88z m0 0" fill="#FFFFFF" /></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E9%93%BE%E6%8E%A5/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#一前言">一、前言</a></li>
+        <li><a href="#二开发困惑">二、开发困惑</a></li>
+        <li><a href="#三解决方法给uiscrollview添加block属性监听滚动">三、解决方法：给<code>UIScrollView</code>添加<code>block</code>属性监听滚动</a></li>
+        <li><a href="#四理清思路">四、理清思路</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/20180308/">
+                
+                    <img src="https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/BlogCover/2018/20180308.jpeg" loading="lazy" alt="Featured image of post 浅读MJRefresh后自定义了个UIScrollView监听滚动的block属性" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/ios/" style="background-color: #000000; color: #fff;">
+                iOS
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/20180308/">浅读MJRefresh后自定义了个UIScrollView监听滚动的block属性</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 08, 2018</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 4 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h3 id="一前言">一、前言</h3>
+<blockquote>
+<p>最近在解答<a class="link" href="https://www.jianshu.com/p/4ea427bab0af"  target="_blank" rel="noopener"
+    >[最新版]MJRefresh解析与详细使用指导</a>和<a class="link" href="https://www.jianshu.com/p/7f3b89a02c38"  target="_blank" rel="noopener"
+    >MJRefresh实现刷新（使用它的Block方法）</a>中简友的提问，浅读了下 <strong><a class="link" href="https://github.com/CoderMJLee/MJRefresh"  target="_blank" rel="noopener"
+    >MJRefresh</a></strong> 的源码 (关于源码解读，网上已有很多，我后续也会写一篇我自己的解读，不过今天要说的是：借鉴别人的思路，做<code>or</code>完善自己的事。):</p>
+<p>利用<code>KVO</code>在<code>- (void)willMoveToSuperview:(UIView *)newSuperview</code>方法调用时监听<code>scrollView</code>的<code>contentOffset</code>/<code>contentSize</code>和<code>panGestureRecognizer</code>的<code>state</code>属性，然后做对应操作。</p>
+</blockquote>
+<h3 id="二开发困惑">二、开发困惑</h3>
+<p>通常，作为<code>iOS</code>开发人员，判断<code>UIScrollView/UITableView/UICollectionView</code>的滚动情况的事，时有发生。如果每次都去实现<code>delegate</code>方法，在我看来，有些麻烦。除了一遍一遍的写代理，还有一种就是建个基类，但是这样基类还是要实现对应的<code>delegate</code>方法。</p>
+<h3 id="三解决方法给uiscrollview添加block属性监听滚动">三、解决方法：给<code>UIScrollView</code>添加<code>block</code>属性监听滚动</h3>
+<blockquote>
+<p>先预览下效果<code>(上面红色的是手机录屏所致)</code>：
+<img src="https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/UGC/20180308/001.gif"
+	
+	
+	
+	loading="lazy"
+	
+		alt="效果图"
+	
+	
+></p>
+</blockquote>
+<h3 id="四理清思路">四、理清思路</h3>
+<blockquote>
+<ol>
+<li>新建一个类 <code>PPMJRefreshComponent</code>,类似<code>MJRefresh</code>中的<code>MJRefreshComponent</code>，用来当做观察者;</li>
+<li>既然 <strong><code>PPMJRefreshComponent</code></strong> 要观察 <strong><code>UIScrollView</code></strong> 的<code>contentOffset</code>以及<code>panGestureRecognizer</code>的<code>state</code>,那么 <strong><code>PPMJRefreshComponent</code></strong> 就要关联当前的 <strong><code>UIScrollView</code></strong>；并且，<strong><code>UIScrollView</code></strong> 要拥有一个 <strong><code>PPMJRefreshComponent</code></strong> 对象（如下图：）；</li>
+</ol>
+<blockquote>
+<p><img src="https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/UGC/20180308/002.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="componet和scrollView相互关系"
+	
+	
+></p>
+</blockquote>
+<ol start="3">
+<li><strong><code>PPMJRefreshComponent</code></strong> 观察的结果怎么传递给 <strong><code>UIScrollView</code></strong>？我采用的是<code>delegate(PPMJRefreshComponentDelegate)</code>,需要 <strong><code>UIScrollView</code></strong> 对象遵守；<strong>（此处不使用block是因为block嵌套block容易出问题）</strong></li>
+</ol>
+<blockquote>
+<p><img src="https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/UGC/20180308/003.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="PPMJRefreshComponentDelegate"
+	
+	
+></p>
+</blockquote>
+<ol start="4">
+<li><strong><code>UIScrollView</code></strong> 对象实现代理，并设置<code>scrollBlock</code>的时候触发监听：<strong>(代码如下，注释已写进去)</strong></li>
+</ol>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span><span class="lnt">83
+</span><span class="lnt">84
+</span><span class="lnt">85
+</span><span class="lnt">86
+</span><span class="lnt">87
+</span><span class="lnt">88
+</span><span class="lnt">89
+</span><span class="lnt">90
+</span><span class="lnt">91
+</span><span class="lnt">92
+</span><span class="lnt">93
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Objective-C" data-lang="Objective-C"><span class="line"><span class="cl"><span class="k">@implementation</span> <span class="nc">UIScrollView</span> <span class="nl">(ScrollBlock)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">#pragma mark --- PPMJRefreshComponentDelegate
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="p">-(</span><span class="kt">void</span><span class="p">)</span><span class="nf">scrollViewContentOffsetDidChange:</span><span class="p">(</span><span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSKeyValueChangeKey</span><span class="p">,</span><span class="kt">id</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">change</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">     <span class="p">[</span><span class="nb">self</span> <span class="nl">contentOffsetBlockAction</span><span class="p">:</span><span class="n">change</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">-(</span><span class="kt">void</span><span class="p">)</span><span class="nf">scrollViewPanStateDidChange:</span><span class="p">(</span><span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSKeyValueChangeKey</span><span class="p">,</span><span class="kt">id</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">change</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nb">self</span> <span class="nl">panGestureRecognizerStateAction</span><span class="p">:</span><span class="n">change</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">-(</span><span class="kt">void</span><span class="p">)</span><span class="nf">contentOffsetBlockAction:</span><span class="p">(</span><span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSKeyValueChangeKey</span><span class="p">,</span><span class="kt">id</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">change</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//这个属性字面理解意思为：正在拖动。实际上是：scrollView是否滚动了，只要不是最开始初始化的时候设置的位置，就为YES。
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">self</span><span class="p">.</span><span class="n">isDragging</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//【注意】此处要特别注意，如果设置contentInset的话，要给pp_lastContentOffsetY赋值为insetT的初始值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">self</span><span class="p">.</span><span class="n">pp_lastContentOffsetY</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="p">[</span><span class="nb">self</span> <span class="n">setupInitializeOffsetY</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//获取当前的contentOffsetY
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">CGFloat</span> <span class="n">currentContentOffsetY</span> <span class="o">=</span> <span class="nb">self</span><span class="p">.</span><span class="n">pp_FSB_offsetY</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">    <span class="c1">//如果前后的contentOffsetY值相同，就不做处理
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">CGFloat</span> <span class="n">lastContentOffsetY</span> <span class="o">=</span> <span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">pp_lastContentOffsetY</span> <span class="n">floatValue</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">currentContentOffsetY</span> <span class="o">==</span> <span class="n">lastContentOffsetY</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//是否是向上滑，初始值为NO
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">BOOL</span> <span class="n">isToUp</span> <span class="o">=</span> <span class="nb">NO</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//向上滑动
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="n">currentContentOffsetY</span> <span class="o">&gt;</span> <span class="n">lastContentOffsetY</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//处理滑动到底部，继续上滑后系统自动反弹而重复调用的情况
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="n">currentContentOffsetY</span><span class="o">+</span><span class="nb">self</span><span class="p">.</span><span class="n">pp_h</span> <span class="o">&gt;</span> <span class="nb">self</span><span class="p">.</span><span class="n">pp_FSB_contentH</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="n">isToUp</span> <span class="o">=</span> <span class="nb">YES</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//向下滑动
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">//处理已经最上面了仍然下拉而反弹时，反复调用
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="n">currentContentOffsetY</span> <span class="o">&lt;=</span> <span class="nb">self</span><span class="p">.</span><span class="n">pp_FSB_insetT</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">//给pp_lastContentOffsetY绑定值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">objc_setAssociatedObject</span><span class="p">(</span><span class="nb">self</span><span class="p">,</span> <span class="k">@selector</span><span class="p">(</span><span class="n">pp_lastContentOffsetY</span><span class="p">),</span> <span class="p">[</span><span class="n">NSNumber</span> <span class="nl">numberWithFloat</span><span class="p">:</span><span class="n">currentContentOffsetY</span><span class="p">],</span> <span class="n">OBJC_ASSOCIATION_RETAIN</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">//是否超过一个屏幕
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">BOOL</span> <span class="n">isInOneScreen</span> <span class="o">=</span> <span class="p">(</span><span class="nb">self</span><span class="p">.</span><span class="n">pp_FSB_insetT</span><span class="o">+</span><span class="nb">self</span><span class="p">.</span><span class="n">pp_FSB_contentH</span> <span class="o">&lt;=</span> <span class="nb">self</span><span class="p">.</span><span class="n">pp_h</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nb">self</span><span class="p">.</span><span class="n">pp_scrollBlock</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">self</span><span class="p">.</span><span class="n">pp_scrollBlock</span><span class="p">(</span><span class="n">currentContentOffsetY</span><span class="p">,</span> <span class="n">isToUp</span><span class="p">,</span><span class="n">isInOneScreen</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">-(</span><span class="kt">void</span><span class="p">)</span><span class="nf">panGestureRecognizerStateAction:</span><span class="p">(</span><span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSKeyValueChangeKey</span><span class="p">,</span><span class="kt">id</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">change</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nb">self</span><span class="p">.</span><span class="n">panGestureRecognizer</span><span class="p">.</span><span class="n">state</span> <span class="o">==</span> <span class="n">UIGestureRecognizerStateEnded</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//内容不够一个屏幕时，系统会自动回弹，这时候记得把pp_lastContentOffsetY重新设置一下
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="nb">self</span><span class="p">.</span><span class="n">pp_FSB_insetT</span><span class="o">+</span><span class="nb">self</span><span class="p">.</span><span class="n">pp_FSB_contentH</span> <span class="o">&lt;=</span> <span class="nb">self</span><span class="p">.</span><span class="n">pp_h</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="p">[</span><span class="nb">self</span> <span class="n">setupInitializeOffsetY</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">//超过一个屏幕,这时候下拉，当松开的时候要把pp_lastContentOffsetY重新设置一下
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="k">if</span> <span class="p">(</span><span class="nb">self</span><span class="p">.</span><span class="n">pp_FSB_offsetY</span> <span class="o">&lt;</span> <span class="nb">self</span><span class="p">.</span><span class="n">pp_FSB_insetT</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="p">[</span><span class="nb">self</span> <span class="n">setupInitializeOffsetY</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">#pragma mark --- 初始化contentOffsetY的值
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="p">-(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setupInitializeOffsetY</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">CGFloat</span> <span class="n">currentContentOffsetY</span> <span class="o">=</span> <span class="o">-</span><span class="nb">self</span><span class="p">.</span><span class="n">pp_FSB_insetT</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">objc_setAssociatedObject</span><span class="p">(</span><span class="nb">self</span><span class="p">,</span> <span class="k">@selector</span><span class="p">(</span><span class="n">pp_lastContentOffsetY</span><span class="p">),</span> <span class="p">[</span><span class="n">NSNumber</span> <span class="nl">numberWithFloat</span><span class="p">:</span><span class="n">currentContentOffsetY</span><span class="p">],</span> <span class="n">OBJC_ASSOCIATION_RETAIN</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">-(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setPp_scrollBlock:</span><span class="p">(</span><span class="n">PPUIScrollViewScrollBlock</span><span class="p">)</span><span class="nv">pp_scrollBlock</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//在设置scrollBlock的时候，触发监听
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nb">self</span><span class="p">.</span><span class="n">pp_component</span><span class="p">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="nb">self</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">objc_setAssociatedObject</span><span class="p">(</span><span class="nb">self</span><span class="p">,</span> <span class="k">@selector</span><span class="p">(</span><span class="n">pp_scrollBlock</span><span class="p">),</span> <span class="n">pp_scrollBlock</span><span class="p">,</span> <span class="n">OBJC_ASSOCIATION_RETAIN</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">-(</span><span class="n">PPUIScrollViewScrollBlock</span><span class="p">)</span><span class="nf">pp_scrollBlock</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="k">return</span> <span class="n">objc_getAssociatedObject</span><span class="p">(</span><span class="nb">self</span><span class="p">,</span> <span class="n">_cmd</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">@end</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>针对上面的代码补充说明如下：</strong></p>
+<ol>
+<li>注意 <strong><code>component</code></strong> 的初识与关联，一定要弄懂为啥我代码中要用<code>runtime</code>强制关联;</li>
+<li>注意 <strong><code>pp_lastContentOffsetY</code></strong> 的使用，它是给 <strong>UIScrollView</strong> 动态绑定的记录上一次的<code>contentOffsetY</code>值的，只有在滑动的时候有效，<strong>最终如果你放外部的话，偏移量还是和contentOffset.Y的值一样</strong>。</li>
+<li><code>-(void)contentOffsetBlockAction:(NSDictionary&lt;NSKeyValueChangeKey,id&gt; *)change</code>这个方法处理滑动情况，但是 <strong>开始下拉</strong> 和 <strong>上拉到底</strong> 的两种临街状态时的 <strong><code>pp_lastContentOffsetY</code></strong> 需要特殊处理，而这个处理就放在<code>panGestureRecognizer.state == UIGestureRecognizerStateEnded</code>的时候。</li>
+</ol>
+<p>最后，感谢 <strong><a class="link" href="https://github.com/CoderMJLee/MJRefresh"  target="_blank" rel="noopener"
+    >MJRefresh</a></strong>！</p>
+<blockquote>
+<p><strong>2018-03-08 14:20:40</strong>  <strong>妇女节快乐！</strong> 感谢公司的 <strong>party</strong>,此刻 <strong>吃着零食喝着饮料</strong>，匆匆结文。</p>
+</blockquote>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/kvo/">KVO</a>
+        
+            <a href="/tags/block/">Block</a>
+        
+            <a href="/tags/mjrefresh/">MJRefresh</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/20230606/">
+        
+        
+            <div class="article-image">
+                <img src="/p/20230606/20230606.f4dd34e13918cb0a80032181f9ad8aa1_hu18931e06667dd8dede62175ea838da33_230338_250x150_fill_q75_box_smart1.jpeg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 设置符号断点（Symbolic Breakpoint）的几种方式"
+                        data-key="20230606" 
+                        data-hash="md5-9N004TkYywqAAyGB&#43;a2KoQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">设置符号断点（Symbolic Breakpoint）的几种方式</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/ios-ios15-uibutton-update-api/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/BlogCover/2021/20211016.jpeg" loading="lazy" data-key="ios-ios15-uibutton-update-api" data-hash="https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/BlogCover/2021/20211016.jpeg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">iOS15终于迎来了UIButton的这个改动！</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/20210502/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/BlogCover/2021/20210502.jpeg" loading="lazy" data-key="20210502" data-hash="https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/BlogCover/2021/20210502.jpeg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">iOS代码块（CodeSnippets）你值得拥有：大大提升编码效率</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/ios%E9%93%BE%E5%BC%8F%E5%88%9B%E5%BB%BAui%E7%BB%88%E7%BB%93%E8%80%85-ppmaker/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/BlogCover/2018/20180509.jpeg" loading="lazy" data-key="" data-hash="https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/BlogCover/2018/20180509.jpeg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">iOS链式创建UI终结者 ➜ PPMaker</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/20171231/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/BlogCover/2017/20171231.jpeg" loading="lazy" data-key="20171231" data-hash="https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/BlogCover/2017/20171231.jpeg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">runtime实战系列（一）--- 微信通讯录bug的完美解决</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2016 - 
+        
+        2023 tiaotiao.pi
+    </section>
+    
+    <section class="powerby">
+        
+            生儿翩翩起舞，舞而惊艳乾坤！ <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

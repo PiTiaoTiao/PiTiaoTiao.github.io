@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Categories on tiaotiao.pi</title>
+        <link>https://example.com/categories/</link>
+        <description>Recent content in Categories on tiaotiao.pi</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Tue, 06 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>iOS</title>
+        <link>https://example.com/categories/ios/</link>
+        <pubDate>Tue, 06 Jun 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/categories/ios/</guid>
+        <description>&lt;img src="https://example.com/categories/ios/001.webp" alt="Featured image of post iOS" /&gt;</description>
+        </item>
+        <item>
+        <title>工具</title>
+        <link>https://example.com/categories/%E5%B7%A5%E5%85%B7/</link>
+        <pubDate>Tue, 06 Jun 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/categories/%E5%B7%A5%E5%85%B7/</guid>
+        <description>&lt;img src="https://example.com/categories/%E5%B7%A5%E5%85%B7/001.webp" alt="Featured image of post 工具" /&gt;</description>
+        </item>
+        <item>
+        <title>Flutter</title>
+        <link>https://example.com/categories/flutter/</link>
+        <pubDate>Sat, 09 Apr 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/categories/flutter/</guid>
+        <description>&lt;img src="https://example.com/categories/flutter/001.webp" alt="Featured image of post Flutter" /&gt;</description>
+        </item>
+        <item>
+        <title>API</title>
+        <link>https://example.com/categories/api/</link>
+        <pubDate>Sat, 16 Oct 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/categories/api/</guid>
+        <description>&lt;img src="https://example.com/categories/api/001.jpeg" alt="Featured image of post API" /&gt;</description>
+        </item>
+        <item>
+        <title>我的开源库</title>
+        <link>https://example.com/categories/%E6%88%91%E7%9A%84%E5%BC%80%E6%BA%90%E5%BA%93/</link>
+        <pubDate>Wed, 09 May 2018 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/categories/%E6%88%91%E7%9A%84%E5%BC%80%E6%BA%90%E5%BA%93/</guid>
+        <description>&lt;img src="https://example.com/categories/%E6%88%91%E7%9A%84%E5%BC%80%E6%BA%90%E5%BA%93/001.webp" alt="Featured image of post 我的开源库" /&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>docsify on tiaotiao.pi</title>
+        <link>https://example.com/tags/docsify/</link>
+        <description>Recent content in docsify on tiaotiao.pi</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Thu, 23 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/docsify/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>利用docsify快速创建个人博客</title>
+        <link>https://example.com/p/20210923/</link>
+        <pubDate>Thu, 23 Sep 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/p/20210923/</guid>
+        <description>&lt;img src="https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/BlogCover/2021/20210923.jpeg" alt="Featured image of post 利用docsify快速创建个人博客" /&gt;&lt;h3 id=&#34;第步通过npm安装docsify&#34;&gt;第①步：通过&lt;code&gt;npm&lt;/code&gt;安装&lt;code&gt;docsify&lt;/code&gt;&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npm i docsify-cli -g
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/Tool/docsify/001.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;第步新建一个github仓库并开启github-pages&#34;&gt;第②步：新建一个&lt;code&gt;GitHub&lt;/code&gt;仓库,并开启&lt;code&gt;GitHub Pages&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/Tool/docsify/002.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;点击&lt;code&gt;Save&lt;/code&gt;后，如下图所示：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/Tool/docsify/003.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⚠️注意：我这里显示&lt;code&gt;abnerpei.com/docsify/&lt;/code&gt;是因为我有域名解析处理，正常的应该是&lt;code&gt;github.io/docsify/&lt;/code&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;此时，我的邮箱（&lt;code&gt;GitHub&lt;/code&gt;绑定的）收到一封邮件通知&amp;quot;&lt;strong&gt;[AbnerPei/docsify]Page build failure&lt;/strong&gt;&amp;quot;:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/Tool/docsify/009.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;第步clone项目并创建docs文件夹&#34;&gt;第③步：&lt;code&gt;clone&lt;/code&gt;项目，并创建&lt;code&gt;docs&lt;/code&gt;文件夹：&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docsify init ./docs
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/Tool/docsify/004.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;本地验证一下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docsify serve ./docs
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/Tool/docsify/005.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;第步配置docsify&#34;&gt;第④步：配置&lt;code&gt;docsify&lt;/code&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;下载&lt;a class=&#34;link&#34; href=&#34;https://github.com/qufei1993&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;qufei1993&lt;/a&gt;/&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/qufei1993/Nodejs-Roadmap&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nodejs-Roadmap&lt;/a&gt;&lt;/strong&gt; 找到docs目录，然后对照&lt;a class=&#34;link&#34; href=&#34;https://www.nodejs.red/#/README&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Nodejs技术栈&lt;/a&gt;，配置自己的&lt;code&gt;docsify&lt;/code&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/Tool/docsify/007.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/Tool/docsify/008.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;第步push项目查看效果&#34;&gt;第⑤步：&lt;code&gt;push&lt;/code&gt;项目，查看效果&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/Tool/docsify/006.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;上图报错解决办法：&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://abnerpei.com/ios/ios_tools/%e3%80%90%e5%b7%a5%e5%85%b7%e7%af%87%e3%80%91remote:%20Support%20for%20password%20authentication%20was%20removed%20on%20August%2013,%202021/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;remote/ Support for password authentication was removed on August 13, 2021&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/Tool/docsify/010.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;参考链接&#34;&gt;参考链接&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/67266483&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Docsify快速搭建个人博客&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docsify.js.org/#/zh-cn/quickstart&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;官方文档-快速开始&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

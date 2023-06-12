@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>git on tiaotiao.pi</title>
+        <link>https://example.com/tags/git/</link>
+        <description>Recent content in git on tiaotiao.pi</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Sun, 15 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/git/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>git报错：remote/ Support for password authentication was removed on August 13, 2021的解决办法</title>
+        <link>https://example.com/p/20210815/</link>
+        <pubDate>Sun, 15 Aug 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/p/20210815/</guid>
+        <description>&lt;img src="https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/BlogCover/2021/20210815.jpeg" alt="Featured image of post git报错：remote/ Support for password authentication was removed on August 13, 2021的解决办法" /&gt;&lt;p&gt;周末在家，天公不做美，大雨！所以，就优化一下之前的一个开源库&lt;a class=&#34;link&#34; href=&#34;https://github.com/AbnerPei/PPMaker&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;PPMaker&lt;/strong&gt;&lt;/a&gt;，可是在提交的时候，就遇到了如下的问题：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/Tool/git/git-error-20210813/001.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;不过，庆幸的是，刚好在我搜这个问题&lt;code&gt;2&lt;/code&gt;小时前，有人给出了解决方案：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/Tool/git/git-error-20210813/002.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://cloud.tencent.com/developer/article/1861466&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;【GitHub不再支持密码验证解决方案：SSH免密与Token登录配置】&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;文中给出了&lt;code&gt;3&lt;/code&gt;种方案，我选择了第&lt;code&gt;3&lt;/code&gt;种：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/Tool/git/git-error-20210813/003.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;第①步：前往&lt;code&gt;GitHub&lt;/code&gt;，复制&lt;code&gt;SSH&lt;/code&gt;的&lt;code&gt;url&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/Tool/git/git-error-20210813/004.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;第②步：找到&lt;a class=&#34;link&#34; href=&#34;https://github.com/AbnerPei/PPMaker&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;PPMaker&lt;/strong&gt;&lt;/a&gt;本地目录下的&lt;code&gt;config&lt;/code&gt;文件&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/Tool/git/git-error-20210813/005.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;第③步：把&lt;code&gt;HTTPS&lt;/code&gt;的&lt;code&gt;url&lt;/code&gt;替换成&lt;code&gt;SSH&lt;/code&gt;的&lt;code&gt;url&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/Tool/git/git-error-20210813/006.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;最后，成功了&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/Tool/git/git-error-20210813/007.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

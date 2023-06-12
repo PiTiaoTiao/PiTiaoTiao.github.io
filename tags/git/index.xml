@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>git on tiaotiao.pi</title>
-        <link>https://example.com/tags/git/</link>
+        <link>https://pitiaotiao.github.io/tags/git/</link>
         <description>Recent content in git on tiaotiao.pi</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Sun, 15 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/git/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 15 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://pitiaotiao.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>git报错：remote/ Support for password authentication was removed on August 13, 2021的解决办法</title>
-        <link>https://example.com/p/20210815/</link>
+        <link>https://pitiaotiao.github.io/p/20210815/</link>
         <pubDate>Sun, 15 Aug 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/20210815/</guid>
+        <guid>https://pitiaotiao.github.io/p/20210815/</guid>
         <description>&lt;img src="https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/BlogCover/2021/20210815.jpeg" alt="Featured image of post git报错：remote/ Support for password authentication was removed on August 13, 2021的解决办法" /&gt;&lt;p&gt;周末在家，天公不做美，大雨！所以，就优化一下之前的一个开源库&lt;a class=&#34;link&#34; href=&#34;https://github.com/AbnerPei/PPMaker&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;strong&gt;PPMaker&lt;/strong&gt;&lt;/a&gt;，可是在提交的时候，就遇到了如下的问题：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/Tool/git/git-error-20210813/001.png&#34;

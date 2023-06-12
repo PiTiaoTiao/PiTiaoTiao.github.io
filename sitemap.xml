@@ -2,121 +2,121 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.com/</loc>
+    <loc>https://pitiaotiao.github.io/</loc>
     <lastmod>2023-06-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/categories/</loc>
+    <loc>https://pitiaotiao.github.io/categories/</loc>
     <lastmod>2023-06-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/categories/ios/</loc>
+    <loc>https://pitiaotiao.github.io/categories/ios/</loc>
     <lastmod>2023-06-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/post/</loc>
+    <loc>https://pitiaotiao.github.io/post/</loc>
     <lastmod>2023-06-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/</loc>
+    <loc>https://pitiaotiao.github.io/tags/</loc>
     <lastmod>2023-06-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/%E7%AC%A6%E5%8F%B7%E6%96%AD%E7%82%B9/</loc>
+    <loc>https://pitiaotiao.github.io/tags/%E7%AC%A6%E5%8F%B7%E6%96%AD%E7%82%B9/</loc>
     <lastmod>2023-06-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/categories/%E5%B7%A5%E5%85%B7/</loc>
+    <loc>https://pitiaotiao.github.io/categories/%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2023-06-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/p/20230606/</loc>
+    <loc>https://pitiaotiao.github.io/p/20230606/</loc>
     <lastmod>2023-06-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/categories/flutter/</loc>
+    <loc>https://pitiaotiao.github.io/categories/flutter/</loc>
     <lastmod>2022-04-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/p/flutter-config/</loc>
+    <loc>https://pitiaotiao.github.io/p/flutter-config/</loc>
     <lastmod>2022-04-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</loc>
+    <loc>https://pitiaotiao.github.io/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</loc>
     <lastmod>2022-04-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/categories/api/</loc>
+    <loc>https://pitiaotiao.github.io/categories/api/</loc>
     <lastmod>2021-10-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/p/ios-ios15-uibutton-update-api/</loc>
+    <loc>https://pitiaotiao.github.io/p/ios-ios15-uibutton-update-api/</loc>
     <lastmod>2021-10-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/docsify/</loc>
+    <loc>https://pitiaotiao.github.io/tags/docsify/</loc>
     <lastmod>2021-09-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/p/20210923/</loc>
+    <loc>https://pitiaotiao.github.io/p/20210923/</loc>
     <lastmod>2021-09-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/git/</loc>
+    <loc>https://pitiaotiao.github.io/tags/git/</loc>
     <lastmod>2021-08-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/p/20210815/</loc>
+    <loc>https://pitiaotiao.github.io/p/20210815/</loc>
     <lastmod>2021-08-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/p/20210502/</loc>
+    <loc>https://pitiaotiao.github.io/p/20210502/</loc>
     <lastmod>2021-05-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/%E4%BB%A3%E7%A0%81%E5%9D%97/</loc>
+    <loc>https://pitiaotiao.github.io/tags/%E4%BB%A3%E7%A0%81%E5%9D%97/</loc>
     <lastmod>2021-05-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/page/</loc>
+    <loc>https://pitiaotiao.github.io/page/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/archives/</loc>
+    <loc>https://pitiaotiao.github.io/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/p/ios%E9%93%BE%E5%BC%8F%E5%88%9B%E5%BB%BAui%E7%BB%88%E7%BB%93%E8%80%85-ppmaker/</loc>
+    <loc>https://pitiaotiao.github.io/p/ios%E9%93%BE%E5%BC%8F%E5%88%9B%E5%BB%BAui%E7%BB%88%E7%BB%93%E8%80%85-ppmaker/</loc>
     <lastmod>2018-05-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/ppmaker/</loc>
+    <loc>https://pitiaotiao.github.io/tags/ppmaker/</loc>
     <lastmod>2018-05-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/categories/%E6%88%91%E7%9A%84%E5%BC%80%E6%BA%90%E5%BA%93/</loc>
+    <loc>https://pitiaotiao.github.io/categories/%E6%88%91%E7%9A%84%E5%BC%80%E6%BA%90%E5%BA%93/</loc>
     <lastmod>2018-05-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/block/</loc>
+    <loc>https://pitiaotiao.github.io/tags/block/</loc>
     <lastmod>2018-03-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/kvo/</loc>
+    <loc>https://pitiaotiao.github.io/tags/kvo/</loc>
     <lastmod>2018-03-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/mjrefresh/</loc>
+    <loc>https://pitiaotiao.github.io/tags/mjrefresh/</loc>
     <lastmod>2018-03-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/p/20180308/</loc>
+    <loc>https://pitiaotiao.github.io/p/20180308/</loc>
     <lastmod>2018-03-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/runtime/</loc>
+    <loc>https://pitiaotiao.github.io/tags/runtime/</loc>
     <lastmod>2017-12-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/p/20171231/</loc>
+    <loc>https://pitiaotiao.github.io/p/20171231/</loc>
     <lastmod>2017-12-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/cocoapods/</loc>
+    <loc>https://pitiaotiao.github.io/tags/cocoapods/</loc>
     <lastmod>2017-11-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/p/20171124/</loc>
+    <loc>https://pitiaotiao.github.io/p/20171124/</loc>
     <lastmod>2017-11-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/nscharacterset/</loc>
+    <loc>https://pitiaotiao.github.io/tags/nscharacterset/</loc>
     <lastmod>2016-12-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/p/%E5%AD%A6%E4%BC%9Anscharacterset%E5%86%8D%E4%B9%9F%E4%B8%8D%E6%80%95%E5%90%84%E7%A7%8D%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%A4%84%E7%90%86/</loc>
+    <loc>https://pitiaotiao.github.io/p/%E5%AD%A6%E4%BC%9Anscharacterset%E5%86%8D%E4%B9%9F%E4%B8%8D%E6%80%95%E5%90%84%E7%A7%8D%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%A4%84%E7%90%86/</loc>
     <lastmod>2016-12-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/pptextfield/</loc>
+    <loc>https://pitiaotiao.github.io/tags/pptextfield/</loc>
     <lastmod>2016-10-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/p/20161010/</loc>
+    <loc>https://pitiaotiao.github.io/p/20161010/</loc>
     <lastmod>2016-10-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/tags/uitextfield/</loc>
+    <loc>https://pitiaotiao.github.io/tags/uitextfield/</loc>
     <lastmod>2016-10-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/%E5%85%B3%E4%BA%8E/</loc>
+    <loc>https://pitiaotiao.github.io/%E5%85%B3%E4%BA%8E/</loc>
   </url><url>
-    <loc>https://example.com/%E9%93%BE%E6%8E%A5/</loc>
+    <loc>https://pitiaotiao.github.io/%E9%93%BE%E6%8E%A5/</loc>
   </url><url>
-    <loc>https://example.com/search/</loc>
+    <loc>https://pitiaotiao.github.io/search/</loc>
   </url>
 </urlset>

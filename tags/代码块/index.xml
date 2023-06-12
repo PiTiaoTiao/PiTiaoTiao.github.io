@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>代码块 on tiaotiao.pi</title>
-        <link>https://example.com/tags/%E4%BB%A3%E7%A0%81%E5%9D%97/</link>
+        <link>https://pitiaotiao.github.io/tags/%E4%BB%A3%E7%A0%81%E5%9D%97/</link>
         <description>Recent content in 代码块 on tiaotiao.pi</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Sun, 02 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/%E4%BB%A3%E7%A0%81%E5%9D%97/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 02 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://pitiaotiao.github.io/tags/%E4%BB%A3%E7%A0%81%E5%9D%97/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>iOS代码块（CodeSnippets）你值得拥有：大大提升编码效率</title>
-        <link>https://example.com/p/20210502/</link>
+        <link>https://pitiaotiao.github.io/p/20210502/</link>
         <pubDate>Sun, 02 May 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/20210502/</guid>
+        <guid>https://pitiaotiao.github.io/p/20210502/</guid>
         <description>&lt;img src="https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/BlogCover/2021/20210502.jpeg" alt="Featured image of post iOS代码块（CodeSnippets）你值得拥有：大大提升编码效率" /&gt;&lt;h2 id=&#34;小实验&#34;&gt;小实验&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;

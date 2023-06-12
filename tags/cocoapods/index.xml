@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>CocoaPods on tiaotiao.pi</title>
-        <link>https://example.com/tags/cocoapods/</link>
+        <link>https://pitiaotiao.github.io/tags/cocoapods/</link>
         <description>Recent content in CocoaPods on tiaotiao.pi</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Fri, 24 Nov 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/cocoapods/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 24 Nov 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://pitiaotiao.github.io/tags/cocoapods/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>使用CocoaPods管理iOS库---制作pod篇</title>
-        <link>https://example.com/p/20171124/</link>
+        <link>https://pitiaotiao.github.io/p/20171124/</link>
         <pubDate>Fri, 24 Nov 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/20171124/</guid>
+        <guid>https://pitiaotiao.github.io/p/20171124/</guid>
         <description>&lt;img src="https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/BlogCover/2017/20171124.jpeg" alt="Featured image of post 使用CocoaPods管理iOS库---制作pod篇" /&gt;&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;我&lt;/strong&gt;  ：“&lt;strong&gt;2017年&lt;/strong&gt;还有多久？”&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;我&lt;/strong&gt;  ：“ &lt;strong&gt;‘冬天来了，春天还会远吗？’&lt;/strong&gt;，马上就要步入&lt;strong&gt;2018年&lt;/strong&gt;，您说&lt;strong&gt;2017年&lt;/strong&gt;还有多久。您就看着吧，下个月到处都是&lt;strong&gt;2017年&lt;/strong&gt;年终总结！”&lt;/p&gt;

@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>runtime on tiaotiao.pi</title>
-        <link>https://example.com/tags/runtime/</link>
+        <link>https://pitiaotiao.github.io/tags/runtime/</link>
         <description>Recent content in runtime on tiaotiao.pi</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Sun, 31 Dec 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/runtime/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 31 Dec 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://pitiaotiao.github.io/tags/runtime/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>runtime实战系列（一）--- 微信通讯录bug的完美解决</title>
-        <link>https://example.com/p/20171231/</link>
+        <link>https://pitiaotiao.github.io/p/20171231/</link>
         <pubDate>Sun, 31 Dec 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/20171231/</guid>
+        <guid>https://pitiaotiao.github.io/p/20171231/</guid>
         <description>&lt;img src="https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/BlogCover/2017/20171231.jpeg" alt="Featured image of post runtime实战系列（一）--- 微信通讯录bug的完美解决" /&gt;&lt;blockquote&gt;
 &lt;p&gt;某天，闲来无聊点击微信通讯录右边的索引（具体操作如下：&lt;strong&gt;打开微信&amp;mdash;通讯录，然后右手点击某个索引，手指别松开，然后左手点击某个联系人&lt;code&gt;cell&lt;/code&gt;，跳转后再返回，你刚才长按的放大索引还在，并且再滑动，索引对应字母也不变化，索引视图卡住。&lt;/strong&gt;），发现了这个&lt;code&gt;bug&lt;/code&gt;（我都滑动到L了，放大的索引还是&lt;code&gt;M&lt;/code&gt;），如下：&lt;/p&gt;
 &lt;/blockquote&gt;

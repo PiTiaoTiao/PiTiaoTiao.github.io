@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>API on tiaotiao.pi</title>
-        <link>https://example.com/categories/api/</link>
+        <link>https://pitiaotiao.github.io/categories/api/</link>
         <description>Recent content in API on tiaotiao.pi</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Sat, 16 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/categories/api/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 16 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://pitiaotiao.github.io/categories/api/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>iOS15终于迎来了UIButton的这个改动！</title>
-        <link>https://example.com/p/ios-ios15-uibutton-update-api/</link>
+        <link>https://pitiaotiao.github.io/p/ios-ios15-uibutton-update-api/</link>
         <pubDate>Sat, 16 Oct 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/ios-ios15-uibutton-update-api/</guid>
+        <guid>https://pitiaotiao.github.io/p/ios-ios15-uibutton-update-api/</guid>
         <description>&lt;img src="https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/BlogCover/2021/20211016.jpeg" alt="Featured image of post iOS15终于迎来了UIButton的这个改动！" /&gt;&lt;p&gt;截止目前（&lt;code&gt;2021-10-16&lt;/code&gt;）为止，要想实现下面的几种&lt;code&gt;button&lt;/code&gt;样式（这里要考虑图片和文字间距），我所知道的方案有两种：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -234,10 +234,10 @@
         </item>
         <item>
         <title>学会NSCharacterSet，再也不怕各种字符串处理！</title>
-        <link>https://example.com/p/%E5%AD%A6%E4%BC%9Anscharacterset%E5%86%8D%E4%B9%9F%E4%B8%8D%E6%80%95%E5%90%84%E7%A7%8D%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%A4%84%E7%90%86/</link>
+        <link>https://pitiaotiao.github.io/p/%E5%AD%A6%E4%BC%9Anscharacterset%E5%86%8D%E4%B9%9F%E4%B8%8D%E6%80%95%E5%90%84%E7%A7%8D%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%A4%84%E7%90%86/</link>
         <pubDate>Fri, 23 Dec 2016 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/%E5%AD%A6%E4%BC%9Anscharacterset%E5%86%8D%E4%B9%9F%E4%B8%8D%E6%80%95%E5%90%84%E7%A7%8D%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%A4%84%E7%90%86/</guid>
+        <guid>https://pitiaotiao.github.io/p/%E5%AD%A6%E4%BC%9Anscharacterset%E5%86%8D%E4%B9%9F%E4%B8%8D%E6%80%95%E5%90%84%E7%A7%8D%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%A4%84%E7%90%86/</guid>
         <description>&lt;img src="https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/BlogCover/2016/20161213.jpeg" alt="Featured image of post 学会NSCharacterSet，再也不怕各种字符串处理！" /&gt;&lt;blockquote&gt;
 &lt;p&gt;[赠语]：&lt;strong&gt;Anything you&amp;rsquo;re good at contributes to happiness.&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;

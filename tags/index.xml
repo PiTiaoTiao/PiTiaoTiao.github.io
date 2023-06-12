@@ -2,120 +2,120 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Tags on tiaotiao.pi</title>
-        <link>https://example.com/tags/</link>
+        <link>https://pitiaotiao.github.io/tags/</link>
         <description>Recent content in Tags on tiaotiao.pi</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Tue, 06 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 06 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://pitiaotiao.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>符号断点</title>
-        <link>https://example.com/tags/%E7%AC%A6%E5%8F%B7%E6%96%AD%E7%82%B9/</link>
+        <link>https://pitiaotiao.github.io/tags/%E7%AC%A6%E5%8F%B7%E6%96%AD%E7%82%B9/</link>
         <pubDate>Tue, 06 Jun 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/tags/%E7%AC%A6%E5%8F%B7%E6%96%AD%E7%82%B9/</guid>
+        <guid>https://pitiaotiao.github.io/tags/%E7%AC%A6%E5%8F%B7%E6%96%AD%E7%82%B9/</guid>
         <description></description>
         </item>
         <item>
         <title>环境配置</title>
-        <link>https://example.com/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</link>
+        <link>https://pitiaotiao.github.io/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</link>
         <pubDate>Sat, 09 Apr 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</guid>
+        <guid>https://pitiaotiao.github.io/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</guid>
         <description></description>
         </item>
         <item>
         <title>docsify</title>
-        <link>https://example.com/tags/docsify/</link>
+        <link>https://pitiaotiao.github.io/tags/docsify/</link>
         <pubDate>Thu, 23 Sep 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/tags/docsify/</guid>
+        <guid>https://pitiaotiao.github.io/tags/docsify/</guid>
         <description></description>
         </item>
         <item>
         <title>git</title>
-        <link>https://example.com/tags/git/</link>
+        <link>https://pitiaotiao.github.io/tags/git/</link>
         <pubDate>Sun, 15 Aug 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/tags/git/</guid>
+        <guid>https://pitiaotiao.github.io/tags/git/</guid>
         <description></description>
         </item>
         <item>
         <title>代码块</title>
-        <link>https://example.com/tags/%E4%BB%A3%E7%A0%81%E5%9D%97/</link>
+        <link>https://pitiaotiao.github.io/tags/%E4%BB%A3%E7%A0%81%E5%9D%97/</link>
         <pubDate>Sun, 02 May 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/tags/%E4%BB%A3%E7%A0%81%E5%9D%97/</guid>
+        <guid>https://pitiaotiao.github.io/tags/%E4%BB%A3%E7%A0%81%E5%9D%97/</guid>
         <description></description>
         </item>
         <item>
         <title>PPMaker</title>
-        <link>https://example.com/tags/ppmaker/</link>
+        <link>https://pitiaotiao.github.io/tags/ppmaker/</link>
         <pubDate>Wed, 09 May 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/tags/ppmaker/</guid>
+        <guid>https://pitiaotiao.github.io/tags/ppmaker/</guid>
         <description></description>
         </item>
         <item>
         <title>Block</title>
-        <link>https://example.com/tags/block/</link>
+        <link>https://pitiaotiao.github.io/tags/block/</link>
         <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/tags/block/</guid>
+        <guid>https://pitiaotiao.github.io/tags/block/</guid>
         <description></description>
         </item>
         <item>
         <title>KVO</title>
-        <link>https://example.com/tags/kvo/</link>
+        <link>https://pitiaotiao.github.io/tags/kvo/</link>
         <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/tags/kvo/</guid>
+        <guid>https://pitiaotiao.github.io/tags/kvo/</guid>
         <description></description>
         </item>
         <item>
         <title>MJRefresh</title>
-        <link>https://example.com/tags/mjrefresh/</link>
+        <link>https://pitiaotiao.github.io/tags/mjrefresh/</link>
         <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/tags/mjrefresh/</guid>
+        <guid>https://pitiaotiao.github.io/tags/mjrefresh/</guid>
         <description></description>
         </item>
         <item>
         <title>runtime</title>
-        <link>https://example.com/tags/runtime/</link>
+        <link>https://pitiaotiao.github.io/tags/runtime/</link>
         <pubDate>Sun, 31 Dec 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/tags/runtime/</guid>
+        <guid>https://pitiaotiao.github.io/tags/runtime/</guid>
         <description></description>
         </item>
         <item>
         <title>CocoaPods</title>
-        <link>https://example.com/tags/cocoapods/</link>
+        <link>https://pitiaotiao.github.io/tags/cocoapods/</link>
         <pubDate>Fri, 24 Nov 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/tags/cocoapods/</guid>
+        <guid>https://pitiaotiao.github.io/tags/cocoapods/</guid>
         <description></description>
         </item>
         <item>
         <title>NSCharacterSet</title>
-        <link>https://example.com/tags/nscharacterset/</link>
+        <link>https://pitiaotiao.github.io/tags/nscharacterset/</link>
         <pubDate>Fri, 23 Dec 2016 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/tags/nscharacterset/</guid>
+        <guid>https://pitiaotiao.github.io/tags/nscharacterset/</guid>
         <description></description>
         </item>
         <item>
         <title>PPTextField</title>
-        <link>https://example.com/tags/pptextfield/</link>
+        <link>https://pitiaotiao.github.io/tags/pptextfield/</link>
         <pubDate>Mon, 10 Oct 2016 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/tags/pptextfield/</guid>
+        <guid>https://pitiaotiao.github.io/tags/pptextfield/</guid>
         <description></description>
         </item>
         <item>
         <title>UITextField</title>
-        <link>https://example.com/tags/uitextfield/</link>
+        <link>https://pitiaotiao.github.io/tags/uitextfield/</link>
         <pubDate>Mon, 10 Oct 2016 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/tags/uitextfield/</guid>
+        <guid>https://pitiaotiao.github.io/tags/uitextfield/</guid>
         <description></description>
         </item>
         

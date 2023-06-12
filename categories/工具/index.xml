@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>工具 on tiaotiao.pi</title>
-        <link>https://example.com/categories/%E5%B7%A5%E5%85%B7/</link>
+        <link>https://pitiaotiao.github.io/categories/%E5%B7%A5%E5%85%B7/</link>
         <description>Recent content in 工具 on tiaotiao.pi</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Tue, 06 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/categories/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 06 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://pitiaotiao.github.io/categories/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>设置符号断点（Symbolic Breakpoint）的几种方式</title>
-        <link>https://example.com/p/20230606/</link>
+        <link>https://pitiaotiao.github.io/p/20230606/</link>
         <pubDate>Tue, 06 Jun 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/20230606/</guid>
-        <description>&lt;img src="https://example.com/p/20230606/20230606.jpeg" alt="Featured image of post 设置符号断点（Symbolic Breakpoint）的几种方式" /&gt;&lt;p&gt;设置符号断点，有以下几种方式：&lt;/p&gt;
+        <guid>https://pitiaotiao.github.io/p/20230606/</guid>
+        <description>&lt;img src="https://pitiaotiao.github.io/p/20230606/20230606.jpeg" alt="Featured image of post 设置符号断点（Symbolic Breakpoint）的几种方式" /&gt;&lt;p&gt;设置符号断点，有以下几种方式：&lt;/p&gt;
 &lt;h2 id=&#34;style-1breakpoint-navigator&#34;&gt;Style 1、&lt;code&gt;Breakpoint navigator&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;https://ap-life-job.oss-cn-shanghai.aliyuncs.com/Job/Developer/iOS/Obsidian-Images/%E8%B0%83%E8%AF%95%E7%AF%87/%E7%AC%A6%E5%8F%B7%E6%96%AD%E7%82%B9/001.png&#34;
 	
@@ -39,10 +39,10 @@
         </item>
         <item>
         <title>利用docsify快速创建个人博客</title>
-        <link>https://example.com/p/20210923/</link>
+        <link>https://pitiaotiao.github.io/p/20210923/</link>
         <pubDate>Thu, 23 Sep 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/20210923/</guid>
+        <guid>https://pitiaotiao.github.io/p/20210923/</guid>
         <description>&lt;img src="https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/BlogCover/2021/20210923.jpeg" alt="Featured image of post 利用docsify快速创建个人博客" /&gt;&lt;h3 id=&#34;第步通过npm安装docsify&#34;&gt;第①步：通过&lt;code&gt;npm&lt;/code&gt;安装&lt;code&gt;docsify&lt;/code&gt;&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -180,10 +180,10 @@
         </item>
         <item>
         <title>git报错：remote/ Support for password authentication was removed on August 13, 2021的解决办法</title>
-        <link>https://example.com/p/20210815/</link>
+        <link>https://pitiaotiao.github.io/p/20210815/</link>
         <pubDate>Sun, 15 Aug 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/20210815/</guid>
+        <guid>https://pitiaotiao.github.io/p/20210815/</guid>
         <description>&lt;img src="https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/BlogCover/2021/20210815.jpeg" alt="Featured image of post git报错：remote/ Support for password authentication was removed on August 13, 2021的解决办法" /&gt;&lt;p&gt;周末在家，天公不做美，大雨！所以，就优化一下之前的一个开源库&lt;a class=&#34;link&#34; href=&#34;https://github.com/AbnerPei/PPMaker&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;strong&gt;PPMaker&lt;/strong&gt;&lt;/a&gt;，可是在提交的时候，就遇到了如下的问题：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/Tool/git/git-error-20210813/001.png&#34;
@@ -257,10 +257,10 @@
         </item>
         <item>
         <title>iOS代码块（CodeSnippets）你值得拥有：大大提升编码效率</title>
-        <link>https://example.com/p/20210502/</link>
+        <link>https://pitiaotiao.github.io/p/20210502/</link>
         <pubDate>Sun, 02 May 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/20210502/</guid>
+        <guid>https://pitiaotiao.github.io/p/20210502/</guid>
         <description>&lt;img src="https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/BlogCover/2021/20210502.jpeg" alt="Featured image of post iOS代码块（CodeSnippets）你值得拥有：大大提升编码效率" /&gt;&lt;h2 id=&#34;小实验&#34;&gt;小实验&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -642,10 +642,10 @@
         </item>
         <item>
         <title>使用CocoaPods管理iOS库---制作pod篇</title>
-        <link>https://example.com/p/20171124/</link>
+        <link>https://pitiaotiao.github.io/p/20171124/</link>
         <pubDate>Fri, 24 Nov 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/20171124/</guid>
+        <guid>https://pitiaotiao.github.io/p/20171124/</guid>
         <description>&lt;img src="https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/BlogCover/2017/20171124.jpeg" alt="Featured image of post 使用CocoaPods管理iOS库---制作pod篇" /&gt;&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;我&lt;/strong&gt;  ：“&lt;strong&gt;2017年&lt;/strong&gt;还有多久？”&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;我&lt;/strong&gt;  ：“ &lt;strong&gt;‘冬天来了，春天还会远吗？’&lt;/strong&gt;，马上就要步入&lt;strong&gt;2018年&lt;/strong&gt;，您说&lt;strong&gt;2017年&lt;/strong&gt;还有多久。您就看着吧，下个月到处都是&lt;strong&gt;2017年&lt;/strong&gt;年终总结！”&lt;/p&gt;

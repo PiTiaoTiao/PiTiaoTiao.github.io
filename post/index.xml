@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Posts on tiaotiao.pi</title>
-        <link>https://example.com/post/</link>
+        <link>https://pitiaotiao.github.io/post/</link>
         <description>Recent content in Posts on tiaotiao.pi</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Tue, 06 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 06 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://pitiaotiao.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>设置符号断点（Symbolic Breakpoint）的几种方式</title>
-        <link>https://example.com/p/20230606/</link>
+        <link>https://pitiaotiao.github.io/p/20230606/</link>
         <pubDate>Tue, 06 Jun 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/20230606/</guid>
-        <description>&lt;img src="https://example.com/p/20230606/20230606.jpeg" alt="Featured image of post 设置符号断点（Symbolic Breakpoint）的几种方式" /&gt;&lt;p&gt;设置符号断点，有以下几种方式：&lt;/p&gt;
+        <guid>https://pitiaotiao.github.io/p/20230606/</guid>
+        <description>&lt;img src="https://pitiaotiao.github.io/p/20230606/20230606.jpeg" alt="Featured image of post 设置符号断点（Symbolic Breakpoint）的几种方式" /&gt;&lt;p&gt;设置符号断点，有以下几种方式：&lt;/p&gt;
 &lt;h2 id=&#34;style-1breakpoint-navigator&#34;&gt;Style 1、&lt;code&gt;Breakpoint navigator&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;https://ap-life-job.oss-cn-shanghai.aliyuncs.com/Job/Developer/iOS/Obsidian-Images/%E8%B0%83%E8%AF%95%E7%AF%87/%E7%AC%A6%E5%8F%B7%E6%96%AD%E7%82%B9/001.png&#34;
 	
@@ -39,10 +39,10 @@
         </item>
         <item>
         <title>Mac上Flutter开发环境配置</title>
-        <link>https://example.com/p/flutter-config/</link>
+        <link>https://pitiaotiao.github.io/p/flutter-config/</link>
         <pubDate>Sat, 09 Apr 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/flutter-config/</guid>
+        <guid>https://pitiaotiao.github.io/p/flutter-config/</guid>
         <description>&lt;img src="https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/BlogCover/2022/20220409.jpeg" alt="Featured image of post Mac上Flutter开发环境配置" /&gt;&lt;h2 id=&#34;一下载flutter-sdk&#34;&gt;一、下载Flutter SDK&lt;/h2&gt;
 &lt;h3 id=&#34;1-去flutter官网httpsflutterdevdocsdevelopmenttoolssdkreleasestabmacosmacos下载最新安装包&#34;&gt;&lt;strong&gt;1. 去&lt;a class=&#34;link&#34; href=&#34;https://flutter.dev/docs/development/tools/sdk/releases?tab=macos#macos&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Flutter官网&lt;/a&gt;下载最新安装包&lt;/strong&gt;&lt;/h3&gt;
@@ -173,10 +173,10 @@
         </item>
         <item>
         <title>iOS15终于迎来了UIButton的这个改动！</title>
-        <link>https://example.com/p/ios-ios15-uibutton-update-api/</link>
+        <link>https://pitiaotiao.github.io/p/ios-ios15-uibutton-update-api/</link>
         <pubDate>Sat, 16 Oct 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/ios-ios15-uibutton-update-api/</guid>
+        <guid>https://pitiaotiao.github.io/p/ios-ios15-uibutton-update-api/</guid>
         <description>&lt;img src="https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/BlogCover/2021/20211016.jpeg" alt="Featured image of post iOS15终于迎来了UIButton的这个改动！" /&gt;&lt;p&gt;截止目前（&lt;code&gt;2021-10-16&lt;/code&gt;）为止，要想实现下面的几种&lt;code&gt;button&lt;/code&gt;样式（这里要考虑图片和文字间距），我所知道的方案有两种：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -399,10 +399,10 @@
         </item>
         <item>
         <title>利用docsify快速创建个人博客</title>
-        <link>https://example.com/p/20210923/</link>
+        <link>https://pitiaotiao.github.io/p/20210923/</link>
         <pubDate>Thu, 23 Sep 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/20210923/</guid>
+        <guid>https://pitiaotiao.github.io/p/20210923/</guid>
         <description>&lt;img src="https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/BlogCover/2021/20210923.jpeg" alt="Featured image of post 利用docsify快速创建个人博客" /&gt;&lt;h3 id=&#34;第步通过npm安装docsify&#34;&gt;第①步：通过&lt;code&gt;npm&lt;/code&gt;安装&lt;code&gt;docsify&lt;/code&gt;&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -540,10 +540,10 @@
         </item>
         <item>
         <title>git报错：remote/ Support for password authentication was removed on August 13, 2021的解决办法</title>
-        <link>https://example.com/p/20210815/</link>
+        <link>https://pitiaotiao.github.io/p/20210815/</link>
         <pubDate>Sun, 15 Aug 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/20210815/</guid>
+        <guid>https://pitiaotiao.github.io/p/20210815/</guid>
         <description>&lt;img src="https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/BlogCover/2021/20210815.jpeg" alt="Featured image of post git报错：remote/ Support for password authentication was removed on August 13, 2021的解决办法" /&gt;&lt;p&gt;周末在家，天公不做美，大雨！所以，就优化一下之前的一个开源库&lt;a class=&#34;link&#34; href=&#34;https://github.com/AbnerPei/PPMaker&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;strong&gt;PPMaker&lt;/strong&gt;&lt;/a&gt;，可是在提交的时候，就遇到了如下的问题：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/Tool/git/git-error-20210813/001.png&#34;
@@ -617,10 +617,10 @@
         </item>
         <item>
         <title>iOS代码块（CodeSnippets）你值得拥有：大大提升编码效率</title>
-        <link>https://example.com/p/20210502/</link>
+        <link>https://pitiaotiao.github.io/p/20210502/</link>
         <pubDate>Sun, 02 May 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/20210502/</guid>
+        <guid>https://pitiaotiao.github.io/p/20210502/</guid>
         <description>&lt;img src="https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/BlogCover/2021/20210502.jpeg" alt="Featured image of post iOS代码块（CodeSnippets）你值得拥有：大大提升编码效率" /&gt;&lt;h2 id=&#34;小实验&#34;&gt;小实验&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -1002,10 +1002,10 @@
         </item>
         <item>
         <title>iOS链式创建UI终结者 ➜ PPMaker</title>
-        <link>https://example.com/p/ios%E9%93%BE%E5%BC%8F%E5%88%9B%E5%BB%BAui%E7%BB%88%E7%BB%93%E8%80%85-ppmaker/</link>
+        <link>https://pitiaotiao.github.io/p/ios%E9%93%BE%E5%BC%8F%E5%88%9B%E5%BB%BAui%E7%BB%88%E7%BB%93%E8%80%85-ppmaker/</link>
         <pubDate>Wed, 09 May 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/ios%E9%93%BE%E5%BC%8F%E5%88%9B%E5%BB%BAui%E7%BB%88%E7%BB%93%E8%80%85-ppmaker/</guid>
+        <guid>https://pitiaotiao.github.io/p/ios%E9%93%BE%E5%BC%8F%E5%88%9B%E5%BB%BAui%E7%BB%88%E7%BB%93%E8%80%85-ppmaker/</guid>
         <description>&lt;img src="https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/BlogCover/2018/20180509.jpeg" alt="Featured image of post iOS链式创建UI终结者 ➜ PPMaker" /&gt;&lt;h3 id=&#34;ppmaker是什么&#34;&gt;&lt;code&gt;PPMaker&lt;/code&gt;是什么❓&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;声明：&lt;code&gt;PPMaker&lt;/code&gt;跟&lt;code&gt;Masonry&lt;/code&gt;功能上是完全不同的库，&lt;code&gt;PPMaker&lt;/code&gt;是快速便捷创建&lt;code&gt;UI/attributedText&lt;/code&gt;等的，而&lt;code&gt;Masonry&lt;/code&gt;是布局的。&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
@@ -1255,10 +1255,10 @@
         </item>
         <item>
         <title>浅读MJRefresh后自定义了个UIScrollView监听滚动的block属性</title>
-        <link>https://example.com/p/20180308/</link>
+        <link>https://pitiaotiao.github.io/p/20180308/</link>
         <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/20180308/</guid>
+        <guid>https://pitiaotiao.github.io/p/20180308/</guid>
         <description>&lt;img src="https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/BlogCover/2018/20180308.jpeg" alt="Featured image of post 浅读MJRefresh后自定义了个UIScrollView监听滚动的block属性" /&gt;&lt;h3 id=&#34;一前言&#34;&gt;一、前言&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;最近在解答&lt;a class=&#34;link&#34; href=&#34;https://www.jianshu.com/p/4ea427bab0af&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -1527,10 +1527,10 @@
         </item>
         <item>
         <title>runtime实战系列（一）--- 微信通讯录bug的完美解决</title>
-        <link>https://example.com/p/20171231/</link>
+        <link>https://pitiaotiao.github.io/p/20171231/</link>
         <pubDate>Sun, 31 Dec 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/20171231/</guid>
+        <guid>https://pitiaotiao.github.io/p/20171231/</guid>
         <description>&lt;img src="https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/BlogCover/2017/20171231.jpeg" alt="Featured image of post runtime实战系列（一）--- 微信通讯录bug的完美解决" /&gt;&lt;blockquote&gt;
 &lt;p&gt;某天，闲来无聊点击微信通讯录右边的索引（具体操作如下：&lt;strong&gt;打开微信&amp;mdash;通讯录，然后右手点击某个索引，手指别松开，然后左手点击某个联系人&lt;code&gt;cell&lt;/code&gt;，跳转后再返回，你刚才长按的放大索引还在，并且再滑动，索引对应字母也不变化，索引视图卡住。&lt;/strong&gt;），发现了这个&lt;code&gt;bug&lt;/code&gt;（我都滑动到L了，放大的索引还是&lt;code&gt;M&lt;/code&gt;），如下：&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -2032,10 +2032,10 @@
         </item>
         <item>
         <title>使用CocoaPods管理iOS库---制作pod篇</title>
-        <link>https://example.com/p/20171124/</link>
+        <link>https://pitiaotiao.github.io/p/20171124/</link>
         <pubDate>Fri, 24 Nov 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/20171124/</guid>
+        <guid>https://pitiaotiao.github.io/p/20171124/</guid>
         <description>&lt;img src="https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/BlogCover/2017/20171124.jpeg" alt="Featured image of post 使用CocoaPods管理iOS库---制作pod篇" /&gt;&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;我&lt;/strong&gt;  ：“&lt;strong&gt;2017年&lt;/strong&gt;还有多久？”&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;我&lt;/strong&gt;  ：“ &lt;strong&gt;‘冬天来了，春天还会远吗？’&lt;/strong&gt;，马上就要步入&lt;strong&gt;2018年&lt;/strong&gt;，您说&lt;strong&gt;2017年&lt;/strong&gt;还有多久。您就看着吧，下个月到处都是&lt;strong&gt;2017年&lt;/strong&gt;年终总结！”&lt;/p&gt;
@@ -2475,10 +2475,10 @@
         </item>
         <item>
         <title>学会NSCharacterSet，再也不怕各种字符串处理！</title>
-        <link>https://example.com/p/%E5%AD%A6%E4%BC%9Anscharacterset%E5%86%8D%E4%B9%9F%E4%B8%8D%E6%80%95%E5%90%84%E7%A7%8D%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%A4%84%E7%90%86/</link>
+        <link>https://pitiaotiao.github.io/p/%E5%AD%A6%E4%BC%9Anscharacterset%E5%86%8D%E4%B9%9F%E4%B8%8D%E6%80%95%E5%90%84%E7%A7%8D%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%A4%84%E7%90%86/</link>
         <pubDate>Fri, 23 Dec 2016 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/%E5%AD%A6%E4%BC%9Anscharacterset%E5%86%8D%E4%B9%9F%E4%B8%8D%E6%80%95%E5%90%84%E7%A7%8D%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%A4%84%E7%90%86/</guid>
+        <guid>https://pitiaotiao.github.io/p/%E5%AD%A6%E4%BC%9Anscharacterset%E5%86%8D%E4%B9%9F%E4%B8%8D%E6%80%95%E5%90%84%E7%A7%8D%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%A4%84%E7%90%86/</guid>
         <description>&lt;img src="https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/BlogCover/2016/20161213.jpeg" alt="Featured image of post 学会NSCharacterSet，再也不怕各种字符串处理！" /&gt;&lt;blockquote&gt;
 &lt;p&gt;[赠语]：&lt;strong&gt;Anything you&amp;rsquo;re good at contributes to happiness.&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -2690,10 +2690,10 @@
         </item>
         <item>
         <title>PPTextField，一个属性搞定UITextField的各种限制，再也不用写一大堆代理了</title>
-        <link>https://example.com/p/20161010/</link>
+        <link>https://pitiaotiao.github.io/p/20161010/</link>
         <pubDate>Mon, 10 Oct 2016 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/20161010/</guid>
+        <guid>https://pitiaotiao.github.io/p/20161010/</guid>
         <description>&lt;img src="https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/BlogCover/2016/20161010.jpeg" alt="Featured image of post PPTextField，一个属性搞定UITextField的各种限制，再也不用写一大堆代理了" /&gt;&lt;blockquote&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/chinesemanbobo/PPTextField&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;strong&gt;PPTextField&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;

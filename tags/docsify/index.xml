@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>docsify on tiaotiao.pi</title>
-        <link>https://example.com/tags/docsify/</link>
+        <link>https://pitiaotiao.github.io/tags/docsify/</link>
         <description>Recent content in docsify on tiaotiao.pi</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Thu, 23 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/docsify/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 23 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://pitiaotiao.github.io/tags/docsify/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>利用docsify快速创建个人博客</title>
-        <link>https://example.com/p/20210923/</link>
+        <link>https://pitiaotiao.github.io/p/20210923/</link>
         <pubDate>Thu, 23 Sep 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/20210923/</guid>
+        <guid>https://pitiaotiao.github.io/p/20210923/</guid>
         <description>&lt;img src="https://ap-hexo-blog-images.oss-cn-shanghai.aliyuncs.com/BlogCover/2021/20210923.jpeg" alt="Featured image of post 利用docsify快速创建个人博客" /&gt;&lt;h3 id=&#34;第步通过npm安装docsify&#34;&gt;第①步：通过&lt;code&gt;npm&lt;/code&gt;安装&lt;code&gt;docsify&lt;/code&gt;&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
